@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+
+    /* Fonts */
+    font-family: 'Ibarra Real Nova', serif;
+}
+body{
+    background-color: rgb(236, 236, 236);
+}
+.collection{
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: rgb(236, 236, 236);
+}
+
+.collection .container{
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff00;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.collection .container .box{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.collection .container .box:nth-of-type(even){
+    transform: translateX(-500%);
+}
+.collection .container .box:nth-of-type(odd){
+    transform: translateX(-500%);
+}
+.collection .container .box.show{
+    transform: translateX(0);
+}
+.collection .container .box .img{
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.collection .container .box .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.collection .container .box .img img:hover{
+    transform: scale(1.1);
+}
+.collection .container .box .contnt{
+    padding: 4px;
+    margin-top: 12px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: #d7d7d7;
+}
+.collection .container .box .contnt::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 3px;
+    height: 24px;
+    border-radius: 4px;
+    background-color: black;
+}
+.collection .container .box .contnt a{
+    padding: 10px;
+    color: #000;
+    font-size: 16px;
+    font-family: monospace
+}
+
+@media (max-width: 426px){
+    .collection{
+        padding: 10px;
+    }
+    .collection .container{
+        padding:50px 0px;
+    }
+}
