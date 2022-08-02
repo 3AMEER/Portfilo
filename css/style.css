@@ -24,8 +24,8 @@ body{
 :root{
     --main-color: #fff;
     --color-contetn: #3A4750;
-    --main-font: 'Ibarra Real Nova', serif;
-    --last-font: 'Nunito', sans-serif;
+    --main-font: monospace ;
+    --last-font: monospace;
 }
 
 .The-line{
@@ -169,7 +169,7 @@ header .icons-right i:hover{
     transform: translateY(-100px);
 }
 .landing .container .center .content h1{
-    font-family: 'Ibarra Real Nova', serif;
+    font-family: monospace ;
     font-size: 45px;
     padding: 0;
     margin: 10px;
@@ -483,6 +483,7 @@ header .icons-right i:hover{
     top: 100px;
 
     transition: 0.5s;
+    background: #27282a;
 }
 .Projects h2{
     padding-bottom: 10px;
@@ -724,4 +725,25 @@ header .icons-right i:hover{
     font-family: 'Nunito', sans-serif;
     font-family: 'Oswald', sans-serif;
     font-family: 'Roboto', sans-serif;
+}
+
+
+.botton {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    color: white;
+    font-family: monospace;
+    background-color: black;
+    border: none;
+    position: fixed;
+    bottom: 10px;
+    right: -30px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+.botton.show{
+    right: 5px;
+    transition: 0.5s;
 }
