@@ -73,3 +73,27 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+
+
+var mybotton = document.getElementById('goup');
+
+window.onscroll = function () {
+
+    'user strict';
+
+    if (window.pageYOffset >= 800){
+        mybotton.style.display = "block";
+    }
+    else {
+        mybotton.style.display = "none";
+    }
+};
+
+mybotton.onclick = function () {
+    'user strict'
+    window.scrollTo({
+         top: 0,
+         behavior: "smooth",
+    });
+} 
